@@ -1,4 +1,4 @@
-<div class="list-warp">
+<div class="list-wrap">
 <% @lists.each do |list| %>
   <div class="list-box">
     <% if list.image.attached? %>
@@ -7,8 +7,8 @@
       <%= image_tag 'no_image', size: "200*200" %>
     <% end %>
     <div class="list-comment">
-      <span class="list-body"><%= list.body%></span>
-      <span class="list-title"><%= link_to list.title , list_path(list:id) %></span>
+      <span class="list-body"><%= list.body %></span>
+      <span class="list-title"><%= link_to list.title , list_path(list.id) %></span>
     </div>
   </div>
   <% end %>
